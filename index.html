@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Webside VII - Menü das Cello spielt </title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+
+    <script src="jquery.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('.play').on('mouseover', function() {
+          var file = $(this).attr('data-sound')
+          new Audio(file).play()
+
+          var color = $(this).attr('data-color')
+          $('.navigation').css('background', color)
+        })
+      })
+    </script>
+
+
+  </head>
+  <body>
+
+    <nav class="navigation">
+      <div class="navigation-items">
+
+        <a href="#" class="play" data-sound="sounds/C.wav" data-color="#111"> C </a>
+
+        <a href="#" class="play" data-sound="sounds/G.wav" data-color="#333"> G </a>
+
+        <a href="#" class="play" data-sound="sounds/D.wav" data-color="#555"> D </a>
+
+        <a href="#" class="play" data-sound="sounds/A.wav" data-color="#aaa"> A </a>
+
+      </div>
+    </nav>
+
+  </body>
+</html>
